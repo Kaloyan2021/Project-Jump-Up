@@ -1,0 +1,4 @@
+sceneSetups:
+- path: JUP.unity
+  isLoaded: 1
+  isActive: 1
