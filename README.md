@@ -1,6 +1,11 @@
 # Project: Jump UP
 ## JUP
 
+#The Unique Of This Project Is That It Is Build From The Ground To What It Should Be At The End
+
+#Not Finished ... Yet
+
+
 В началото на играта всеки играч се записва - електронна поща, име и училище.
 След като се стартира играта се показват два бутона - старт и рекорди.
 Играта има един мод - за двама 
