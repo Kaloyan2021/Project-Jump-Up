@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Backgrounds\README.txt" />
     <None Include="Assets\License.txt" />
     <None Include="Assets\Spritesheets\spritesheet_complete.xml" />
     <None Include="Assets\Spritesheets\spritesheet_enemies.xml" />
