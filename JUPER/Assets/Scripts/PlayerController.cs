@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
 
     private Rigidbody2D myRigidBody;
-
+    public float jumpTime;
+    private float jumpTimeCounter;
 
     public bool grounded;
     public LayerMask whatIsGround;
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour {
     private Collider2D myCollider;
 
     private Animator myAnimator;
+
+
+
 	// Use this for initialization
 	void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -24,6 +28,8 @@ public class PlayerController : MonoBehaviour {
         myCollider = GetComponent<Collider2D>();
 
         myAnimator = GetComponent<Animator>();
+
+        jumpTimeCounter = jumpTime;
 	}
 	
 	// Update is called once per frame
@@ -41,6 +47,18 @@ public class PlayerController : MonoBehaviour {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
 
             }
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetMouseButton(0))
+        {
+
+            if (jumpTimeCounter > 0)
+            {
+
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+
         }
 
         myAnimator.SetFloat("Speed", myRigidBody.velocity.x);
